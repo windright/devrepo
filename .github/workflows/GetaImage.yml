@@ -15,7 +15,7 @@ jobs:
       - name: Show Docker Images
         run: docker images
       - name: Save Docker Image
-        uses: docker save -o static-debian12.tar gcr.io/distroless/static-debian12:nonroot
+        run: docker save -o static-debian12.tar gcr.io/distroless/static-debian12:nonroot
       - name: Artifact Docker Image
         uses: actions/upload-artifact@v4
         with:
